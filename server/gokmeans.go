@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-// Node represents an observation of floating point values
 type Node []float64
 
 type Data struct {
@@ -34,7 +33,7 @@ type Cent struct {
 	Valor2 float64 `json:"Claster 2"`
 }
 
-func GetCentroids(w http.ResponseWriter, r *http.Request) {
+func GetCentroidsGraph(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var datita []Cent
 	var datitaoficial []Cent
@@ -51,22 +50,12 @@ func GetCentroids(w http.ResponseWriter, r *http.Request) {
 		iterable += 1
 		datitaoficial = append(datitaoficial, temp)
 	}
-	// temp.Valor = value[0]
-	// temp.VICTIMA_EDAD = value[1]
-	// temp.VICTIMA_NRO_HIJOS = value[2]
-	// temp.AGRESOR_EDAD = value[3]
-	// temp.ALCOHOL_DROGAS = value[4]
-	// temp.ACUCHILLAMIENTO = value[5]
-	// temp.GOLPES_DIVERSOS = value[6]
-	// temp.DISPARO_BALA = value[7]
-	// temp.ENVENENAMIENTO = value[8]
-	// temp.DESBARRANCAMIENTO = value[9]
-	// temp.ASFIXIA_ESTRAGULAMIENTO = value[10]
-	// temp.ATROPELLAMIENTO = value[11]
-	// temp.QUEMADURA = value[12]
-	// temp.OTRO = value[13]
 
 	json.NewEncoder(w).Encode(datitaoficial)
+}
+func GetCentroids(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(Centroids)
 }
 
 //Realiza la predicción

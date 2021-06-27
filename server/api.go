@@ -110,8 +110,8 @@ func New() Server {
 	_, Centroids = Train(DataSetNodes, 2, 148)
 
 	r.HandleFunc("/gokmeans/predict", PredictKmeans).Methods("GET", "OPTIONS")
-	r.HandleFunc("/gokmeans/centroids/graph", GetCentroids).Methods("GET", "OPTIONS")
-
+	r.HandleFunc("/gokmeans/centroids/graph", GetCentroidsGraph).Methods("GET", "OPTIONS")
+	r.HandleFunc("/gokmeans/centroids", GetCentroids).Methods("GET", "OPTONS")
 	//Iniciar Servidor
 	a.router = r
 	return a
