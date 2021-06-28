@@ -1,9 +1,7 @@
-package serverNodoHijo
+package nodos
 
 import (
-	"encoding/json"
 	"math/rand"
-	"net/http"
 	"time"
 )
 
@@ -153,4 +151,3 @@ func meanNode(values []Node) Node {
 
 	return newNode
 }
-
