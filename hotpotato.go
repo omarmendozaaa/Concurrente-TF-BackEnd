@@ -14,7 +14,7 @@ import (
 var addrs []string
 
 func main() {
-	myip := "10.142.113.32"
+	myip := myIp()
 	fmt.Printf("Soy %s\n", myip)
 	go registerServer(myip)
 	go hotServer(myip)
