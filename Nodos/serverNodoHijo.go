@@ -1,4 +1,4 @@
-package serverNodoHijo
+package nodos
 
 import (
 	"math/rand"
@@ -151,4 +151,3 @@ func meanNode(values []Node) Node {
 
 	return newNode
 }
-
