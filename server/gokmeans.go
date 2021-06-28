@@ -143,7 +143,6 @@ func Train2(Nodes []Node, clusterCount int, maxRounds int, centroids []Node) (bo
 			}
 		}
 	}
-
 	return true, centroids
 }
 
