@@ -107,7 +107,7 @@ func New() Server {
 	}
 
 	//Train( data, clusters, iteraciones para definir centroide)
-	_, Centroids = Train(DataSetNodes, 2, 148)
+	_, Centroids = Train(DataSetNodes, 3, 148)
 
 	r.HandleFunc("/gokmeans/predict", PredictKmeans).Methods("GET", "OPTIONS")
 	r.HandleFunc("/gokmeans/centroids/graph", GetCentroidsGraph).Methods("GET", "OPTIONS")

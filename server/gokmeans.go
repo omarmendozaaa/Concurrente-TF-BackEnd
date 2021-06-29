@@ -31,6 +31,7 @@ type Cluster struct {
 type Cent struct {
 	Valor  float64 `json:"Claster 1"`
 	Valor2 float64 `json:"Claster 2"`
+	Valor3 float64 `json:"Claster 3"`
 }
 
 func GetCentroidsGraph(w http.ResponseWriter, r *http.Request) {
